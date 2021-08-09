@@ -7,16 +7,26 @@ void LCM_Set_Signals_Off();
 
 bit LCM_Check_Busy();
 
+// Description : Write Instruction code into Instructin Register
 void LCM_Write_Ins(unsigned char INS);
+// Description :
 void LCM_Write_Dat(unsigned char DAT);
 
+// Description :
 unsigned char LCM_Read_Dat();
+// Description :
 void LCM_Set_CGAddr(unsigned char addr);
+// Description :
 void LCM_Set_DDAddr(unsigned char addr);
 
+// Description : Initialize your Liquid Crystal Module 
 void LCM_Init();
+
+// Description : Dispaly strings at line ( only 1 and 2 implemented ) position ( starts from 0 , up to 40) 
 void LCM_Puts_Str(unsigned char LINE,unsigned char POSI,unsigned char *str);
+// Description : Dispaly numbers at specified position , range :  0-255.
 void LCM_Puts_Num(unsigned char LINE,unsigned char POSI,unsigned char num);
+
 //Instructon Mode
 #define CLR_DISP 0X01		//Clear entire display and sets DDRAM address 0 in AC.
 #define RET_HOME 0X02		//Sets DDRAM address 0 in AC, return to original positioin. DDRRAM unchanged.
