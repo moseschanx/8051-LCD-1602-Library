@@ -15,6 +15,7 @@ void LCM_Set_Signals_On(bit RS,bit RW){
 	1 for Read
 	
 	When RS = 0 RW = 1 , it reads busy flag from LCM_LCM_DB7 and address coutner from (LCM_DB0 to LCM_DB6).		
+
 	*/
 		LCM_RS = RS;
 		LCM_RW = RW;
@@ -54,7 +55,7 @@ void LCM_Write_Dat(unsigned char DAT){
 	while(LCM_Check_Busy());
 	LCM_Set_Signals_On(1,0);
 	LCM_DB = DAT;
-	delay(1);		//For the internal instruction execution time.
+	delay(1);		
 	
 	LCM_Set_Signals_Off();
 }
@@ -62,7 +63,7 @@ void LCM_Write_Dat(unsigned char DAT){
 unsigned char LCM_Read_Dat(){
 	while(LCM_Check_Busy());
 	LCM_Set_Signals_On(1,1);
-	delay(1);			//For the internal instruction execution time.
+	delay(1);	
 	
 	LCM_Set_Signals_Off();
 	return LCM_DB;
