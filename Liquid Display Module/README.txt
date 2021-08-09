@@ -5,3 +5,4 @@ To use these code to drive your LCD1602 or other HD44780 module :
 	2.Invoke LCM_Init();
 	3.Invoke LCM_Put_Str(); or LCM_Put_Num();. ( see HD44780.h )
 	
+You can use these basic function to implement your own LCD driving features.
