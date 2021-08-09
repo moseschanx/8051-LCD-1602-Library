@@ -1,5 +1,7 @@
-To use these code :
-	1.Modify the "Connection" section in config.h .
+This is a C code implementation of Hitachi HD44780. ( Scrictly depend on the manual )
+
+To use these code to drive your LCD1602 or other HD44780 module :
+	1.Modify the "Connection" section in config.h 
 	2.Invoke LCM_Init();
-	3.Check functions presented in HD44780.h.
+	3.Invoke LCM_Put_Str(); or LCM_Put_Num();. ( see HD44780.h )
 	
