@@ -5,12 +5,17 @@
 /***************** HD44780U Intrisic Operation Implementations *****************/
 void LCM_Set_Signals_On(bit RS,bit RW){
 	
-	/* RS : 0 for Instruction Register (IR)
-					1 for Data Register (DR)
-		 RW : 0 for Write
-					1 for Read
-		 When RS = 0 RW = 1 , it reads busy flag from LCM_LCM_DB7 and address coutner 
-													from (LCM_DB0 to LCM_DB6).		*/
+	/* 
+	
+	RS : 
+	0 for Instruction Register (IR)
+	1 for Data Register (DR)
+	RW : 
+	0 for Write
+	1 for Read
+	
+	When RS = 0 RW = 1 , it reads busy flag from LCM_LCM_DB7 and address coutner from (LCM_DB0 to LCM_DB6).		
+	*/
 		LCM_RS = RS;
 		LCM_RW = RW;
 		LCM_E  = 1;		//Starts read/Write process.
