@@ -1,4 +1,6 @@
-This is a C code implementation of Hitachi HD44780. ( Scrictly depend on the manual )
+This is a C code implementation of Hitachi HD44780. ( Based on the manual , under the current directory )
+
+	The Dot Matrix Liquid Crystal Display Controller/Driver Library for HITACHI.
 
 To use these code to drive your LCD1602 or other HD44780 module :
 
